@@ -1,8 +1,10 @@
+<img width="1426" height="895" alt="image" src="https://github.com/user-attachments/assets/665fdaae-78ae-4b1c-b4ed-bf86fdb51ddd" />
+
+
 # Edge Runner
 
 A neon, side-scrolling runner built with plain HTML, CSS, and JavaScript (no
-canvas).  
-Originally started as a replacement for a course project (PP1), but the real
+canvas). Originally started as a replacement for a course project (PP1), but the real
 goal was getting sharp with DOM updates, input handling, timing loops, and
 keeping game state sane.
 
