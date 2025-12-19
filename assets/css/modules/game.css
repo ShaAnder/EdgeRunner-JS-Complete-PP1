@@ -4,124 +4,126 @@
 */
 
 .game-area {
-  position: relative;
-  border-radius: inherit;
-  padding: 2.25rem;
-  height: clamp(420px, 62vh, 600px);
+	position: relative;
+	border-radius: inherit;
+	padding: 2.25rem;
+	height: clamp(28.75rem, 68vh, 42.5rem);
+	touch-action: none;
+	user-select: none;
 }
 
 .runner {
-  position: absolute;
-  width: 56px;
-  height: 56px;
-  bottom: 56px;
-  left: 72px;
-  border-radius: 16px;
-  background: transparent;
-  border: var(--neon-border);
-  box-shadow: var(--neon-shadow-strong);
-  transform: translate(var(--runner-x, 0px), var(--runner-y, 0px))
-    rotate(var(--runner-rot, 0deg));
-  transform-origin: center bottom;
-  will-change: transform;
+	position: absolute;
+	width: 56px;
+	height: 56px;
+	bottom: 56px;
+	left: 72px;
+	border-radius: 16px;
+	background: transparent;
+	border: var(--neon-border);
+	box-shadow: var(--neon-shadow-strong);
+	transform: translate(var(--runner-x, 0px), var(--runner-y, 0px))
+		rotate(var(--runner-rot, 0deg));
+	transform-origin: center bottom;
+	will-change: transform;
 }
 
 .runner::after {
-  content: none;
+	content: none;
 }
 
 .particle-layer {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  overflow: hidden;
+	position: absolute;
+	inset: 0;
+	pointer-events: none;
+	overflow: hidden;
 }
 
 .particle {
-  position: absolute;
-  width: var(--particle-size, 7px);
-  height: var(--particle-size, 7px);
-  border-radius: 3px;
-  background: transparent;
-  border: 1px solid var(--accent);
-  box-shadow: 0 0 8px rgba(72, 255, 220, 0.22), 0 0 14px rgba(72, 255, 220, 0.1);
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  will-change: transform, opacity;
+	position: absolute;
+	width: var(--particle-size, 7px);
+	height: var(--particle-size, 7px);
+	border-radius: 3px;
+	background: transparent;
+	border: 1px solid var(--accent);
+	box-shadow: 0 0 8px rgba(72, 255, 220, 0.22), 0 0 14px rgba(72, 255, 220, 0.1);
+	transform: translate(-50%, -50%);
+	opacity: 0;
+	will-change: transform, opacity;
 }
 
 .track {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: var(--track-tile);
-  overflow: hidden;
-  pointer-events: none;
-  background: rgba(2, 2, 5, 0.8);
-  box-shadow: 0 -2px 22px rgba(6, 7, 10, 0.75),
-    0 -6px 30px rgba(240, 244, 255, 0.08);
-  filter: var(--track-filter, none);
-  transform: translateY(0);
-  transition: transform 240ms ease;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: var(--track-tile);
+	overflow: hidden;
+	pointer-events: none;
+	background: rgba(2, 2, 5, 0.8);
+	box-shadow: 0 -2px 22px rgba(6, 7, 10, 0.75),
+		0 -6px 30px rgba(240, 244, 255, 0.08);
+	filter: var(--track-filter, none);
+	transform: translateY(0);
+	transition: transform 240ms ease;
 }
 
 body.preload .track {
-  transform: translateY(110%);
+	transform: translateY(110%);
 }
 
 .track::before,
 .track::after {
-  display: none;
+	display: none;
 }
 
 .track__strip {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  will-change: transform;
+	position: absolute;
+	inset: 0;
+	display: flex;
+	will-change: transform;
 }
 
 .track__tile {
-  width: var(--track-tile);
-  height: var(--track-tile);
-  flex: 0 0 auto;
-  box-sizing: border-box;
-  border-top: var(--track-stroke-h) solid var(--track-b);
-  border-bottom: var(--track-stroke-h) solid var(--track-b);
-  border-left: none;
-  border-right: none;
-  background: transparent;
-  opacity: 0.92;
+	width: var(--track-tile);
+	height: var(--track-tile);
+	flex: 0 0 auto;
+	box-sizing: border-box;
+	border-top: var(--track-stroke-h) solid var(--track-b);
+	border-bottom: var(--track-stroke-h) solid var(--track-b);
+	border-left: none;
+	border-right: none;
+	background: transparent;
+	opacity: 0.92;
 }
 
 .track__tile--first {
-  border-left: none;
+	border-left: none;
 }
 
 /* Keep a grid vibe without vertical borders (alternating tile tint). */
 .track__strip .track__tile:nth-child(odd) {
-  background: color-mix(in srgb, var(--track-a) 8%, transparent);
+	background: color-mix(in srgb, var(--track-a) 8%, transparent);
 }
 
 .track__strip .track__tile:nth-child(even) {
-  background: color-mix(in srgb, var(--track-a) 4%, transparent);
+	background: color-mix(in srgb, var(--track-a) 4%, transparent);
 }
 
 .track__topline {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  height: var(--track-stroke-h);
-  background: var(--track-b);
-  box-shadow: 0 0 10px rgba(240, 244, 255, 0.12),
-    0 0 18px rgba(240, 244, 255, 0.08);
-  opacity: 0.92;
-  pointer-events: none;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	height: var(--track-stroke-h);
+	background: var(--track-b);
+	box-shadow: 0 0 10px rgba(240, 244, 255, 0.12),
+		0 0 18px rgba(240, 244, 255, 0.08);
+	opacity: 0.92;
+	pointer-events: none;
 }
 
 body.preload .track__strip,
 body.preload .track__topline {
-  opacity: 0;
+	opacity: 0;
 }

@@ -72,6 +72,12 @@ export function createContext() {
 			charging: false,
 			chargeStart: null,
 			chargeRatio: 0,
+			touch: {
+				leftId: null,
+				rightId: null,
+				chargeId: null,
+				chargeStart: null,
+			},
 		},
 		track: null,
 		lastFrame: 0,

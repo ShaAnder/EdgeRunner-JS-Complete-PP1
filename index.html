@@ -35,6 +35,23 @@
 						role="img"
 						aria-label="Neon runner avatar"
 					></div>
+
+					<section class="scoreboard" aria-live="polite">
+						<div>
+							<p class="label">Score</p>
+							<p id="score" class="value">0</p>
+						</div>
+						<div>
+							<p class="label">Time</p>
+							<p id="time" class="value">0:00</p>
+						</div>
+						<div>
+							<p class="label">Multiplier</p>
+							<p id="multiplier" class="value value--multiplier" data-level="0">
+								1x
+							</p>
+						</div>
+					</section>
 				</div>
 
 				<div
@@ -52,7 +69,7 @@
 						<button class="modal__button" id="retryBtn" type="button">
 							Try Again
 						</button>
-						<p class="modal__hint">Tip: tap Space for a quick hop.</p>
+						<p class="modal__hint">Tip: Space hops, hold ↑ to charge.</p>
 					</div>
 				</div>
 			</main>
@@ -73,8 +90,8 @@
 							</li>
 							<li>Move with <strong>A/D</strong> (or <strong>←/→</strong>).</li>
 							<li>
-								<strong>Tap/hold Space</strong> to jump. Holding charges a
-								higher jump.
+								Press <strong>Space</strong> to jump. Hold <strong>↑</strong> to
+								charge a higher jump.
 							</li>
 							<li>Avoid spikes. Survive longer to boost speed and score.</li>
 						</ol>
@@ -84,26 +101,18 @@
 						Start Run
 					</button>
 
-					<p class="modal__hint">Controls: A/D or ←/→ to move, Space to jump</p>
+					<p class="modal__hint">
+						Controls: A/D or ←/→ to move, Space to jump, hold ↑ to charge.
+						Touch: hold left/right to move, tap/hold center to jump.
+					</p>
 				</div>
 			</div>
 
-			<section class="scoreboard" aria-live="polite">
-				<div>
-					<p class="label">Score</p>
-					<p id="score" class="value">0</p>
-				</div>
-				<div>
-					<p class="label">Time</p>
-					<p id="time" class="value">0:00</p>
-				</div>
-				<div>
-					<p class="label">Multiplier</p>
-					<p id="multiplier" class="value value--multiplier" data-level="0">
-						1x
-					</p>
-				</div>
-			</section>
+			<footer class="legal">
+				<a href="./privacy.html">Privacy</a>
+				<span aria-hidden="true">•</span>
+				<a href="./terms.html">Terms</a>
+			</footer>
 		</div>
 
 		<script type="module" src="./assets/js/main.js"></script>

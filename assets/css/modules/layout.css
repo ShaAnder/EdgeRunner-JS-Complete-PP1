@@ -4,89 +4,106 @@
 */
 
 .page {
-  width: min(1200px, 100%);
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
+	width: min(1200px, 100%);
+	display: flex;
+	flex-direction: column;
+	gap: 0.75rem;
 }
 
 .hero .eyebrow {
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
-  font-size: 0.8rem;
-  color: var(--muted);
+	letter-spacing: 0.3em;
+	text-transform: uppercase;
+	font-size: 0.8rem;
+	color: var(--muted);
 }
 
 .hero h1 {
-  font-size: clamp(2.5rem, 5vw, 3.75rem);
-  margin: 0.5rem 0;
+	font-size: clamp(2.5rem, 5vw, 3.75rem);
+	margin: 0.5rem 0;
 }
 
 .hero .lede {
-  max-width: 48ch;
-  color: var(--muted);
-  line-height: 1.6;
+	max-width: 48ch;
+	color: var(--muted);
+	line-height: 1.6;
 }
 
 .game-shell {
-  position: relative;
-  border-radius: 2rem;
-  overflow: hidden;
-  min-height: 520px;
-  background: linear-gradient(145deg, #05060f, #090d2b);
-  box-shadow: var(--shadow-lg);
+	position: relative;
+	border-radius: 2rem;
+	overflow: hidden;
+	min-height: 500px;
+	background: linear-gradient(145deg, #05060f, #090d2b);
+	box-shadow: var(--shadow-lg);
 }
 
 .backdrop {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
+	position: absolute;
+	inset: 0;
+	pointer-events: none;
 }
 
 .layer {
-  position: absolute;
-  inset: 0;
+	position: absolute;
+	inset: 0;
 }
 
 .layer--sky {
-  background: linear-gradient(
-    180deg,
-    rgba(72, 255, 220, 0.2),
-    rgba(5, 6, 15, 0.9)
-  );
+	background: linear-gradient(
+		180deg,
+		rgba(72, 255, 220, 0.2),
+		rgba(5, 6, 15, 0.9)
+	);
 }
 
 .layer--haze {
-  background: radial-gradient(
-    circle at 70% 40%,
-    rgba(255, 94, 141, 0.25),
-    transparent 50%
-  );
-  animation: pulse 12s ease-in-out infinite;
+	background: radial-gradient(
+		circle at 70% 40%,
+		rgba(255, 94, 141, 0.25),
+		transparent 50%
+	);
+	animation: pulse 12s ease-in-out infinite;
 }
 
 .layer--grid {
-  background-image: repeating-linear-gradient(
-      0deg,
-      transparent 0 20px,
-      rgba(72, 255, 220, 0.12) 20px 21px
-    ),
-    repeating-linear-gradient(
-      90deg,
-      transparent 0 38px,
-      rgba(72, 255, 220, 0.12) 38px 39px
-    );
-  background-size: 100% 21px, 39px 100%;
-  background-position: 0 0, 0 0;
-  mask-image: linear-gradient(transparent, black 20%, black 80%, transparent);
+	background-image: repeating-linear-gradient(
+			0deg,
+			transparent 0 20px,
+			rgba(72, 255, 220, 0.12) 20px 21px
+		),
+		repeating-linear-gradient(
+			90deg,
+			transparent 0 38px,
+			rgba(72, 255, 220, 0.12) 38px 39px
+		);
+	background-size: 100% 21px, 39px 100%;
+	background-position: 0 0, 0 0;
+	mask-image: linear-gradient(transparent, black 20%, black 80%, transparent);
 
-  animation: gridScroll var(--grid-scroll-duration, 1.8s) linear infinite;
-  opacity: 0.16;
+	animation: gridScroll var(--grid-scroll-duration, 1.8s) linear infinite;
+	opacity: 0.16;
 }
 
 footer {
-  text-transform: uppercase;
-  letter-spacing: 0.3em;
-  font-size: 0.75rem;
-  color: var(--muted);
+	text-transform: uppercase;
+	letter-spacing: 0.3em;
+	font-size: 0.75rem;
+	color: var(--muted);
+}
+
+footer.legal {
+	display: flex;
+	justify-content: center;
+	gap: 0.75rem;
+	padding-bottom: 0.25rem;
+}
+
+footer.legal a {
+	color: var(--muted);
+	text-decoration: none;
+}
+
+footer.legal a:hover {
+	color: var(--text);
+	text-decoration: underline;
 }

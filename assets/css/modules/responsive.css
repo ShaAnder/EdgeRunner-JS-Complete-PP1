@@ -4,29 +4,32 @@
 */
 
 @media (max-width: 700px) {
-  body {
-    padding: 1.25rem 1rem;
-  }
+	body {
+		padding: 1rem 0.75rem;
+	}
 
-  .game-area {
-    padding: 1rem;
-    height: 360px;
-  }
+	.game-area {
+		padding: 1rem;
+		height: 23.75rem;
+	}
 
-  .runner {
-    left: 32px;
-  }
+	.runner {
+		left: 32px;
+	}
 
-  .modal__panel {
-    padding: 1.5rem 1.25rem;
-    border-radius: 1.5rem;
-  }
+	.modal__panel {
+		padding: 1.5rem 1.25rem;
+		border-radius: 1.5rem;
+	}
 
-  .scoreboard {
-    gap: 0.75rem;
-  }
+	.scoreboard {
+		top: 0.75rem;
+		left: 0.75rem;
+		right: 0.75rem;
+		gap: 0.4rem;
+	}
 
-  .scoreboard .value {
-    font-size: 2.4rem;
-  }
+	.scoreboard .value {
+		font-size: 1.25rem;
+	}
 }

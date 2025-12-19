@@ -15,6 +15,7 @@ keeping game state sane.
 - [Tech Notes](#tech-notes)
 - [Project Structure](#project-structure)
 - [Development Notes](#development-notes)
+- [Legal](#legal)
 - [License](#license)
 
 ## Features
@@ -81,6 +82,11 @@ Choose one:
 - No build step required
 - If a build tool is added later (Vite, Parcel, etc.), `.gitignore` already
   covers common output folders
+
+## Legal
+
+- Privacy Policy: `privacy.html` (collects 0 data)
+- Terms of Service: `terms.html`
 
 ## License
 
