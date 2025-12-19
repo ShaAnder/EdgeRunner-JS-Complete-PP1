@@ -1,0 +1,41 @@
+/*
+  tokens.css
+  Design tokens (CSS custom properties).
+  Keep colors/sizing here so the rest of the CSS stays clean.
+*/
+
+:root {
+  --bg: #050510;
+  --bg-alt: #0c0f27;
+  --accent: #48ffdc;
+  --accent-strong: #ff5e8d;
+  --text: #f0f4ff;
+  --muted: #91a4ff;
+  --grid: rgba(72, 255, 220, 0.25);
+  --danger: #ff335f;
+  --success: #6eff9c;
+  --panel-bg: rgba(9, 12, 41, 0.75);
+  --panel-bg-strong: rgba(9, 12, 41, 0.78);
+
+  --track-tile: 56px;
+  --track-a: #f0f4ff;
+  --track-b: #d6dce6;
+  --track-filter: none;
+  --track-stroke-h: 4px;
+  --track-stroke-v: 2px;
+
+  --font-primary: 'Space Grotesk', 'Segoe UI', sans-serif;
+  --font-mono: 'Space Mono', 'Fira Code', monospace;
+
+  --shadow-lg: 0 15px 45px rgba(0, 0, 0, 0.55);
+
+  --neon-border: 3px solid var(--accent);
+  --neon-shadow-strong: 0 0 14px rgba(72, 255, 220, 0.55),
+    0 0 28px rgba(72, 255, 220, 0.25);
+  --neon-shadow-dim: 0 0 10px rgba(72, 255, 220, 0.22),
+    0 0 18px rgba(72, 255, 220, 0.1);
+
+  --danger-border: 3px solid var(--danger);
+  --danger-shadow: 0 0 12px rgba(255, 51, 95, 0.55),
+    0 0 22px rgba(255, 51, 95, 0.25);
+}

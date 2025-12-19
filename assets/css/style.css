@@ -1,0 +1,15 @@
+/*
+  style.css (central stylesheet)
+  This file only imports smaller, focused CSS files.
+
+  Keeping the game CSS compartmentalized makes it easier to navigate.
+*/
+
+@import url("./modules/tokens.css");
+@import url("./modules/reset.css");
+@import url("./modules/layout.css");
+@import url("./modules/game.css");
+@import url("./modules/ui.css");
+@import url("./modules/obstacles.css");
+@import url("./modules/animations.css");
+@import url("./modules/responsive.css");

@@ -1,0 +1,53 @@
+/*
+  obstacles.css
+  Obstacle visuals (neon outline spikes + danger bases).
+*/
+
+.obstacle {
+  position: absolute;
+  bottom: 56px;
+  left: 0;
+  pointer-events: none;
+}
+
+.obstacle__spike {
+  position: absolute;
+  left: 0;
+  display: block;
+  filter: drop-shadow(0 0 12px rgba(255, 51, 95, 0.65))
+    drop-shadow(0 0 22px rgba(255, 51, 95, 0.4));
+}
+
+.obstacle__spike polygon {
+  fill: none;
+  stroke: var(--danger);
+  stroke-width: 8;
+  stroke-linejoin: round;
+}
+
+.obstacle__block,
+.obstacle__bar {
+  position: absolute;
+  left: 0;
+  background: transparent;
+  border: var(--danger-border);
+  box-shadow: var(--danger-shadow);
+}
+
+.obstacle__block {
+  border-radius: 12px;
+}
+
+.obstacle__bar {
+  border-radius: 10px;
+}
+
+.data-pulse {
+  position: absolute;
+  bottom: 120px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--success), #0f8b4c);
+  box-shadow: 0 0 30px rgba(110, 255, 156, 0.65);
+}

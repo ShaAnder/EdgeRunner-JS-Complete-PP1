@@ -1,0 +1,46 @@
+/*
+  animations.css
+  Small animations used across the UI.
+*/
+
+.flash {
+  animation: flash 0.35s ease;
+}
+
+@keyframes flash {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.08);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.25;
+  }
+
+  50% {
+    opacity: 0.45;
+  }
+
+  100% {
+    opacity: 0.25;
+  }
+}
+
+@keyframes gridScroll {
+  0% {
+    background-position: 0 0, 0 0;
+  }
+
+  100% {
+    background-position: 0 21px, -39px 0;
+  }
+}

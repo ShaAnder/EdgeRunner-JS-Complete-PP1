@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Edge Runner</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Space+Mono:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./assets/css/style.css" />
+	</head>
+
+	<body class="preload">
+		<div class="page">
+			<main class="game-shell">
+				<div class="backdrop" aria-hidden="true">
+					<span class="layer layer--sky"></span>
+					<span class="layer layer--haze"></span>
+					<span class="layer layer--grid"></span>
+				</div>
+
+				<div
+					class="game-area"
+					id="gameArea"
+					role="application"
+					aria-label="Side scrolling runner playground"
+				>
+					<div class="track" aria-hidden="true"></div>
+					<div
+						class="runner"
+						id="runner"
+						role="img"
+						aria-label="Neon runner avatar"
+					></div>
+				</div>
+
+				<div
+					class="modal modal--inShell hidden"
+					id="retryModal"
+					role="dialog"
+					aria-modal="true"
+				>
+					<div class="modal__backdrop" aria-hidden="true"></div>
+					<div class="modal__panel" aria-labelledby="retryModalTitle">
+						<p class="modal__title" id="retryModalTitle">Try again</p>
+						<p class="modal__message" id="retryModalMessage">
+							Oh no — you're dead! Try again?
+						</p>
+						<button class="modal__button" id="retryBtn" type="button">
+							Try Again
+						</button>
+						<p class="modal__hint">Tip: tap Space for a quick hop.</p>
+					</div>
+				</div>
+			</main>
+
+			<div class="modal" id="startModal" role="dialog" aria-modal="true">
+				<div class="modal__backdrop" aria-hidden="true"></div>
+				<div class="modal__panel" aria-labelledby="startModalTitle">
+					<h1 class="modal__gameTitle" id="startModalTitle">Edge Runner</h1>
+
+					<p class="modal__message" id="startModalMessage">Ready to run?</p>
+
+					<div class="modal__how">
+						<p class="modal__title">How it works</p>
+						<ol class="modal__list">
+							<li>
+								Hit <strong>Start Run</strong> (or press a control key) to
+								begin.
+							</li>
+							<li>Move with <strong>A/D</strong> (or <strong>←/→</strong>).</li>
+							<li>
+								<strong>Tap/hold Space</strong> to jump. Holding charges a
+								higher jump.
+							</li>
+							<li>Avoid spikes. Survive longer to boost speed and score.</li>
+						</ol>
+					</div>
+
+					<button class="modal__button" id="startBtn" type="button">
+						Start Run
+					</button>
+
+					<p class="modal__hint">Controls: A/D or ←/→ to move, Space to jump</p>
+				</div>
+			</div>
+
+			<section class="scoreboard" aria-live="polite">
+				<div>
+					<p class="label">Score</p>
+					<p id="score" class="value">0</p>
+				</div>
+				<div>
+					<p class="label">Time</p>
+					<p id="time" class="value">0:00</p>
+				</div>
+				<div>
+					<p class="label">Multiplier</p>
+					<p id="multiplier" class="value value--multiplier" data-level="0">
+						1x
+					</p>
+				</div>
+			</section>
+		</div>
+
+		<script type="module" src="./assets/js/main.js"></script>
+	</body>
+</html>

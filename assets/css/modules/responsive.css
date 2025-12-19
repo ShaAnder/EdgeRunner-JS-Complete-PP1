@@ -1,0 +1,32 @@
+/*
+  responsive.css
+  Small-screen tweaks.
+*/
+
+@media (max-width: 700px) {
+  body {
+    padding: 1.25rem 1rem;
+  }
+
+  .game-area {
+    padding: 1rem;
+    height: 360px;
+  }
+
+  .runner {
+    left: 32px;
+  }
+
+  .modal__panel {
+    padding: 1.5rem 1.25rem;
+    border-radius: 1.5rem;
+  }
+
+  .scoreboard {
+    gap: 0.75rem;
+  }
+
+  .scoreboard .value {
+    font-size: 2.4rem;
+  }
+}
