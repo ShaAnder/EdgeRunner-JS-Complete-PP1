@@ -5,7 +5,7 @@
  * All other modules receive this context so we avoid globals.
  */
 
-import { clamp } from "./utils.js";
+import { clamp } from "./utils.js?v=20251219";
 
 export const MULTIPLIER_TIER_MS = 20_000;
 export const TRACK_BLEND_MS = 10_000;

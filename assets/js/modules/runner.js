@@ -3,7 +3,7 @@
  * Runner physics + movement + jump logic.
  */
 
-import { clamp } from "./utils.js";
+import { clamp } from "./utils.js?v=20251219";
 
 export function computeRotationGroundLift(ctx, angleDeg) {
 	if (!angleDeg) return 0;

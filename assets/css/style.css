@@ -5,11 +5,11 @@
   Keeping the game CSS compartmentalized makes it easier to navigate.
 */
 
-@import url("./modules/tokens.css");
-@import url("./modules/reset.css");
-@import url("./modules/layout.css");
-@import url("./modules/game.css");
-@import url("./modules/ui.css");
-@import url("./modules/obstacles.css");
-@import url("./modules/animations.css");
-@import url("./modules/responsive.css");
+@import url("./modules/tokens.css?v=20251219");
+@import url("./modules/reset.css?v=20251219");
+@import url("./modules/layout.css?v=20251219");
+@import url("./modules/game.css?v=20251219");
+@import url("./modules/ui.css?v=20251219");
+@import url("./modules/obstacles.css?v=20251219");
+@import url("./modules/animations.css?v=20251219");
+@import url("./modules/responsive.css?v=20251219");

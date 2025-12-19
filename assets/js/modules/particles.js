@@ -3,8 +3,8 @@
  * Runner particle trail (DOM-only, beginner-friendly).
  */
 
-import { clamp, randomIntBetween } from "./utils.js";
-import { computeRotationGroundLift } from "./runner.js";
+import { clamp, randomIntBetween } from "./utils.js?v=20251219";
+import { computeRotationGroundLift } from "./runner.js?v=20251219";
 
 export function initParticleLayer(ctx) {
 	if (!ctx.ui.gameArea) return;

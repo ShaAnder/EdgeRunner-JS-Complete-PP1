@@ -5,25 +5,25 @@
  * This file is the only script referenced by index.html.
  */
 
-import { createContext } from "./modules/context.js";
+import { createContext } from "./modules/context.js?v=20251219";
 import {
 	isControlEvent,
 	isStandardJumpEvent,
 	isChargeJumpEvent,
 	normalizeKey,
-} from "./modules/input.js";
-import { clamp } from "./modules/utils.js";
+} from "./modules/input.js?v=20251219";
+import { clamp } from "./modules/utils.js?v=20251219";
 import {
 	buildTrack,
 	renderTrack,
 	resetWorld,
 	updateWorld,
-} from "./modules/track.js";
+} from "./modules/track.js?v=20251219";
 import {
 	initParticleLayer,
 	clearParticles,
 	updateParticles,
-} from "./modules/particles.js";
+} from "./modules/particles.js?v=20251219";
 import {
 	updateBounds,
 	resetRunner,
@@ -36,19 +36,19 @@ import {
 	applyVerticalMovement,
 	updateSpin,
 	finalizeCharge,
-} from "./modules/runner.js";
+} from "./modules/runner.js?v=20251219";
 import {
 	clearObstacles,
 	updateObstacles,
 	checkObstacleCollisions,
-} from "./modules/obstacles.js";
+} from "./modules/obstacles.js?v=20251219";
 import {
 	resetScore,
 	onScore,
 	resetSurvival,
 	updateSurvival,
 	updateHud,
-} from "./modules/hud.js";
+} from "./modules/hud.js?v=20251219";
 
 const ctx = createContext();
 
