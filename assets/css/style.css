@@ -6,10 +6,18 @@
 */
 
 @import url("./modules/tokens.css?v=20251219");
+/* Base design tokens (colors, sizes, shadows). */
 @import url("./modules/reset.css?v=20251219");
+/* Minimal reset + global page background. */
 @import url("./modules/layout.css?v=20251219");
+/* Layout + backdrop layers + shell styling. */
 @import url("./modules/game.css?v=20251219");
+/* Runner, particles, and track visuals. */
 @import url("./modules/ui.css?v=20251219");
+/* HUD + modals + instructions. */
 @import url("./modules/obstacles.css?v=20251219");
+/* Obstacle shapes/glow + collectible styling. */
 @import url("./modules/animations.css?v=20251219");
+/* Keyframes + small animation helpers. */
 @import url("./modules/responsive.css?v=20251219");
+/* Mobile-ish tweaks. */

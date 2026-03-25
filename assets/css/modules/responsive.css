@@ -4,25 +4,31 @@
 */
 
 @media (max-width: 700px) {
+	/* Smaller screens: tighten spacing and keep the game comfy. */
 	body {
+		/* Less outer padding so content fits without feeling cramped. */
 		padding: 1rem 0.75rem;
 	}
 
 	.game-area {
+		/* Reduce padding + lock height a bit so it stays playable. */
 		padding: 1rem;
 		height: 23.75rem;
 	}
 
 	.runner {
+		/* Nudge the runner in so it isn't hugging the edge. */
 		left: 32px;
 	}
 
 	.modal__panel {
+		/* Modals: slightly smaller padding and radius on mobile. */
 		padding: 1.5rem 1.25rem;
 		border-radius: 1.5rem;
 	}
 
 	.scoreboard {
+		/* HUD: tuck it a bit closer to the top edges. */
 		top: 0.75rem;
 		left: 0.75rem;
 		right: 0.75rem;
@@ -30,6 +36,7 @@
 	}
 
 	.scoreboard .value {
+		/* Slightly smaller numbers so chips don't wrap. */
 		font-size: 1.25rem;
 	}
 }

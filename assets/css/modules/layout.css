@@ -4,6 +4,7 @@
 */
 
 .page {
+	/* Main page wrapper: keeps everything centered and nicely spaced. */
 	width: min(1200px, 100%);
 	display: flex;
 	flex-direction: column;
@@ -11,6 +12,7 @@
 }
 
 .hero .eyebrow {
+	/* Small “label” text above the title. */
 	letter-spacing: 0.3em;
 	text-transform: uppercase;
 	font-size: 0.8rem;
@@ -18,17 +20,20 @@
 }
 
 .hero h1 {
+	/* Big game title with responsive sizing. */
 	font-size: clamp(2.5rem, 5vw, 3.75rem);
 	margin: 0.5rem 0;
 }
 
 .hero .lede {
+	/* Short intro paragraph: keep it readable + softer color. */
 	max-width: 48ch;
 	color: var(--muted);
 	line-height: 1.6;
 }
 
 .game-shell {
+	/* The rounded “console” container that holds the whole game. */
 	position: relative;
 	border-radius: 2rem;
 	overflow: hidden;
@@ -38,17 +43,20 @@
 }
 
 .backdrop {
+	/* Backdrop layers sit behind the game; not clickable. */
 	position: absolute;
 	inset: 0;
 	pointer-events: none;
 }
 
 .layer {
+	/* Base class for each visual layer (sky/haze/grid). */
 	position: absolute;
 	inset: 0;
 }
 
 .layer--sky {
+	/* Soft top-to-bottom glow so the scene doesn’t feel flat. */
 	background: linear-gradient(
 		180deg,
 		rgba(72, 255, 220, 0.2),
@@ -57,6 +65,7 @@
 }
 
 .layer--haze {
+	/* Pink-ish haze blob that slowly “breathes”. */
 	background: radial-gradient(
 		circle at 70% 40%,
 		rgba(255, 94, 141, 0.25),
@@ -66,7 +75,9 @@
 }
 
 .layer--grid {
-	background-image: repeating-linear-gradient(
+	/* Retro grid lines using repeating gradients (and a fade mask). */
+	background-image:
+		repeating-linear-gradient(
 			0deg,
 			transparent 0 20px,
 			rgba(72, 255, 220, 0.12) 20px 21px
@@ -76,8 +87,12 @@
 			transparent 0 38px,
 			rgba(72, 255, 220, 0.12) 38px 39px
 		);
-	background-size: 100% 21px, 39px 100%;
-	background-position: 0 0, 0 0;
+	background-size:
+		100% 21px,
+		39px 100%;
+	background-position:
+		0 0,
+		0 0;
 	mask-image: linear-gradient(transparent, black 20%, black 80%, transparent);
 
 	animation: gridScroll var(--grid-scroll-duration, 1.8s) linear infinite;
@@ -85,6 +100,7 @@
 }
 
 footer {
+	/* Footer text gets the same “terminal-ish” uppercase vibe. */
 	text-transform: uppercase;
 	letter-spacing: 0.3em;
 	font-size: 0.75rem;
@@ -92,6 +108,7 @@ footer {
 }
 
 footer.legal {
+	/* Legal links row (privacy/terms), centered. */
 	display: flex;
 	justify-content: center;
 	gap: 0.75rem;
@@ -99,11 +116,13 @@ footer.legal {
 }
 
 footer.legal a {
+	/* Link styling: muted by default, no underline. */
 	color: var(--muted);
 	text-decoration: none;
 }
 
 footer.legal a:hover {
+	/* Hover: brighten up and add underline so it feels clickable. */
 	color: var(--text);
 	text-decoration: underline;
 }

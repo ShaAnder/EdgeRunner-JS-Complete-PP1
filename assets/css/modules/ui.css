@@ -4,6 +4,7 @@
 */
 
 .scoreboard {
+	/* HUD row: pinned to the top inside the game shell. */
 	position: absolute;
 	top: 1rem;
 	left: 1rem;
@@ -16,6 +17,7 @@
 }
 
 .scoreboard > div {
+	/* Each HUD chip (score, best, multiplier, etc.). */
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -30,31 +32,38 @@
 }
 
 .scoreboard .label {
+	/* Tiny uppercase label above the big number. */
 	font-size: 0.7rem;
 	letter-spacing: 0.18em;
 	text-transform: uppercase;
 }
 
 .scoreboard .value {
+	/* The main value readout (big + bold). */
 	font-size: 1.6rem;
 	font-weight: 600;
 }
 
 .value--multiplier {
+	/* Multiplier specifically: green and can hue-shift by level. */
 	font-size: 1.25rem;
 	display: inline-block;
 	color: var(--success);
 	filter: hue-rotate(var(--multiplier-hue-rotate, 0deg));
-	transition: color 150ms ease, filter 150ms ease;
+	transition:
+		color 150ms ease,
+		filter 150ms ease;
 }
 
 .value--multiplier[data-level="0"] {
+	/* Level 0 multiplier should look “neutral” (aka not boosted). */
 	color: var(--text);
 	filter: none;
 }
 
 /* Modals (start + retry) */
 .modal {
+	/* Modal wrapper: full-screen overlay that centers its panel. */
 	position: fixed;
 	inset: 0;
 	z-index: 50;
@@ -65,15 +74,18 @@
 
 /* In-game modal variant (used for Try Again). */
 .modal--inShell {
+	/* Same modal UI, but constrained to the game shell (try-again). */
 	position: absolute;
 	z-index: 20;
 }
 
 .modal.hidden {
+	/* Hidden state: remove from layout entirely. */
 	display: none;
 }
 
 .modal__backdrop {
+	/* Dark scrim behind the modal panel. */
 	position: absolute;
 	inset: 0;
 	background: rgba(0, 0, 0, 0.78);
@@ -81,10 +93,12 @@
 
 /* Slightly darker backdrop for the start screen. */
 #startModal .modal__backdrop {
+	/* Start screen gets a slightly heavier backdrop for focus. */
 	background: rgba(0, 0, 0, 0.86);
 }
 
 .modal__panel {
+	/* The actual modal card (glass-y, neon border). */
 	position: relative;
 	width: min(660px, 100%);
 	background: rgba(5, 6, 15, 0.95);
@@ -101,17 +115,22 @@
 
 /* Start modal: darker + blue glow when active (visible). */
 #startModal:not(.hidden) .modal__panel {
+	/* When the start modal is visible, switch to a cooler blue-ish glow. */
 	border-color: var(--muted);
-	box-shadow: 0 0 14px rgba(145, 164, 255, 0.32),
-		0 0 28px rgba(145, 164, 255, 0.18), var(--shadow-lg);
+	box-shadow:
+		0 0 14px rgba(145, 164, 255, 0.32),
+		0 0 28px rgba(145, 164, 255, 0.18),
+		var(--shadow-lg);
 }
 
 .modal__gameTitle {
+	/* Big game title text inside the modal. */
 	font-size: clamp(2.25rem, 4vw, 3.25rem);
 	letter-spacing: 0.05em;
 }
 
 .modal__title {
+	/* Smaller uppercase title used for sub-headings. */
 	font-size: 1.25rem;
 	letter-spacing: 0.1em;
 	text-transform: uppercase;
@@ -119,12 +138,14 @@
 }
 
 .modal__message {
+	/* Body copy — keep it readable and not too wide. */
 	max-width: 50ch;
 	color: var(--text);
 	line-height: 1.5;
 }
 
 .modal__button {
+	/* Primary CTA button (Start / Try Again). */
 	background: var(--accent);
 	color: #030308;
 	border: none;
@@ -133,15 +154,19 @@
 	font-weight: 700;
 	font-size: 1rem;
 	cursor: pointer;
-	transition: transform 0.25s ease, box-shadow 0.25s ease;
+	transition:
+		transform 0.25s ease,
+		box-shadow 0.25s ease;
 	box-shadow: 0 12px 25px rgba(0, 0, 0, 0.45);
 }
 
 .modal__button:hover {
+	/* Tiny lift on hover so it feels pressable. */
 	transform: translateY(-2px);
 }
 
 .modal__hint {
+	/* Small helper text under the button. */
 	text-transform: uppercase;
 	letter-spacing: 0.2em;
 	font-size: 0.75rem;
@@ -149,6 +174,7 @@
 }
 
 .modal__how {
+	/* “How to play” section layout inside the modal. */
 	width: min(540px, 100%);
 	display: flex;
 	flex-direction: column;
@@ -156,6 +182,7 @@
 }
 
 .modal__list {
+	/* Numbered instructions list, aligned left for easier scanning. */
 	list-style: decimal-leading-zero;
 	padding-left: 1.25rem;
 	line-height: 1.7;
@@ -164,10 +191,12 @@
 }
 
 .modal__list strong {
+	/* Highlight key words in the how-to list. */
 	color: var(--accent);
 }
 
 .instructions {
+	/* Collapsible instructions panel below the game. */
 	background: var(--panel-bg-strong);
 	padding: 1.75rem;
 	border-radius: 1.5rem;
@@ -176,6 +205,7 @@
 }
 
 .instructions summary {
+	/* Clickable header row for the <details> element. */
 	cursor: pointer;
 	font-size: 1.5rem;
 	font-weight: 700;
@@ -188,19 +218,23 @@
 }
 
 .instructions summary::-webkit-details-marker {
+	/* Hide the default disclosure triangle in WebKit. */
 	display: none;
 }
 
 .instructions summary::after {
+	/* Custom + icon when closed. */
 	content: "+";
 	color: var(--muted);
 }
 
 .instructions[open] summary::after {
+	/* Swap to a − icon when open. */
 	content: "−";
 }
 
 .instructions ol {
+	/* The ordered list inside the instructions drop-down. */
 	list-style: decimal-leading-zero;
 	padding-left: 1.25rem;
 	margin-top: 1rem;
@@ -209,10 +243,12 @@
 }
 
 .instructions strong {
+	/* Accent the important bits (same as in the modal list). */
 	color: var(--accent);
 }
 
 .instructions .mono {
+	/* Monospace callouts for keys / inline code-ish text. */
 	font-family: var(--font-mono);
 	color: var(--accent-strong);
 }

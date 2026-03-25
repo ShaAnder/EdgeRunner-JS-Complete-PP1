@@ -4,43 +4,51 @@
 */
 
 .flash {
-  animation: flash 0.35s ease;
+	/* Tiny “pop” animation hook (used to draw attention). */
+	animation: flash 0.35s ease;
 }
 
+/* Scale up then back down — basically a quick UI heartbeat. */
 @keyframes flash {
-  0% {
-    transform: scale(1);
-  }
+	0% {
+		transform: scale(1);
+	}
 
-  50% {
-    transform: scale(1.08);
-  }
+	50% {
+		transform: scale(1.08);
+	}
 
-  100% {
-    transform: scale(1);
-  }
+	100% {
+		transform: scale(1);
+	}
 }
 
+/* Slow opacity breathing used for background haze. */
 @keyframes pulse {
-  0% {
-    opacity: 0.25;
-  }
+	0% {
+		opacity: 0.25;
+	}
 
-  50% {
-    opacity: 0.45;
-  }
+	50% {
+		opacity: 0.45;
+	}
 
-  100% {
-    opacity: 0.25;
-  }
+	100% {
+		opacity: 0.25;
+	}
 }
 
+/* Moves the grid background positions to fake motion. */
 @keyframes gridScroll {
-  0% {
-    background-position: 0 0, 0 0;
-  }
+	0% {
+		background-position:
+			0 0,
+			0 0;
+	}
 
-  100% {
-    background-position: 0 21px, -39px 0;
-  }
+	100% {
+		background-position:
+			0 21px,
+			-39px 0;
+	}
 }
